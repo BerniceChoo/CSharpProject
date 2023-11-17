@@ -1,0 +1,32 @@
+﻿@model List<ardonagh.Models.Customer>
+
+@{
+}
+
+<h1>Customers</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Post Code</th>
+            <th>Height (meters)</th>
+            <th> </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var customer in Model)
+        {
+            <tr>
+                <td>@customer.Id</td>
+                <td>@customer.Name</td>
+                <td>@customer.Age</td>
+                <td>@customer.Postcode</td>
+                <td>@customer.Height</td>
+                <td><a href="Customers/View/@customer.Id">Edit</a></td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,31 @@
+﻿@model ardonagh.Models.UpdateCustomerViewModel
+
+@{
+}
+
+<h1>Edit Customer</h1>
+<form method="post" action="View" class="mt-5">
+    <div class="mb-3">
+        <label for="" class="form-label">Id</label>
+        <input type="text" class="form-control" asp-for="Id" readonly>
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Name</label>
+        <input type="text" class="form-control" asp-for="Name">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Age</label>
+        <input type="number" class="form-control" asp-for="Age">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Post Code</label>
+        <input type="text" class="form-control" asp-for="Postcode">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Height (meters)</label>
+        <input type="number" step="0.01" class="form-control" asp-for="Height">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <a href="/Customers" class="btn btn-secondary">Cancel</a>
+</form>
